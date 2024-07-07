@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Villa Salud - Portfolio</title>
-  <link rel="stylesheet" href="../styles/log_in_styles.css" />
+  <link rel="stylesheet" type="text/css" href="../styles/log_in_styles.css" />
 </head>
 
 <body>
@@ -23,16 +23,17 @@
   </header>
   <main>
     <section>
-      <div class="login">
-      </div>
+      <div class="login"></div>
       <div class="login-container">
         <h2>Login</h2>
-        <form action="/submit-login" method="post">
-          <label id="username">Username</label>
+        <form action="../database_connections/log_in_database_connection.php" method="post" class="form">
+          <label for="username">Username</label>
           <input type="text" id="username" name="username" placeholder="Username" required />
-          <label id="password">Password</label>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Email" required />
+          <label for="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Password" required />
-          <button type="submit" class="log-in" value="Login">Log In</button>
+          <button type="submit" class="log-in" id="log_in">Log In</button>
         </form>
         <p>
           Don't have an account?
@@ -41,8 +42,7 @@
       </div>
     </section>
   </main>
-
-  <script src="scripts.js"></script>
+  <script src="../scripts/log_in_script.js"></script>
 </body>
 
 </html>

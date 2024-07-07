@@ -22,6 +22,7 @@ header {
   z-index: 2;
   position: absolute;
   width: 100%;
+  margin-top: 30px
 }
 
 .logo img {
@@ -61,7 +62,7 @@ nav ul li a:hover {
   color: white;
 }
 
-.hero {
+.tagline {
   position: relative;
   background-image: url("../assets/background_picture.jpeg");
   height: 650px;
@@ -72,7 +73,7 @@ nav ul li a:hover {
   padding: 100px 20px;
 }
 
-.hero::before {
+.tagline::before {
   content: "";
   position: absolute;
   top: 0;
@@ -83,7 +84,7 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-.hero-text {
+.tagline-text {
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -97,11 +98,11 @@ nav ul li a:hover {
   margin-top: 80px;
 }
 
-.hero-text h1 {
+.tagline-text h1 {
   margin-bottom: 20px;
 }
 
-.hero .btn {
+.tagline .btn {
   background-color: #004000;
   color: white;
   padding: 10px 20px;
@@ -112,7 +113,7 @@ nav ul li a:hover {
   font-size: 30px;
 }
 
-.hero .btn:hover {
+.tagline .btn:hover {
   background-color: #008000;
 }
 
@@ -129,7 +130,13 @@ nav ul li a:hover {
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.services::before {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0px 12px 24px black;
 }
 
 .service img {

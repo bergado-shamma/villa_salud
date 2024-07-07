@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="../styles/booking_form_styles.css" />
   </head>
   <body>
+  <header>
+      <div class="logo">
+        <img src="../assets/logo.jpg" alt="Villa Salud Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../works/about_us.php">About Us</a></li>
+          <li><a href="../works/packages.php">Packages</a></li>
+        </ul>
+      </nav>
+    </header>
     <form action="process_booking.php" method="post">
       <h2>Booking Details</h2>
       <label for="patron_name">Name:</label>
@@ -21,13 +33,13 @@
       <label for="patron_phone">Phone Number:</label>
       <input type="text" id="patron_phone" name="patron_phone" required />
 
-      <label for="venue_id">Venue:</label>
-      <select id="venue_id" name="venue_id" required>
+      <label for="venue">Venue:</label>
+      <select id="venue" name="venue" required>
         <option value="">Select Venue</option>
       </select>
 
-      <label for="package_id">Package:</label>
-      <select id="package_id" name="package_id" required>
+      <label for="package">Package:</label>
+      <select id="package" name="package" required>
         <option value="">Select Package</option>
       </select>
 
@@ -158,7 +170,6 @@
         5. Villa Salud shall not be liable for any illness resulting from
         consumption of food taken out from the Villa Salud.
       </p>
-
       <button type="submit">Submit Booking</button>
     </form>
   </body>
