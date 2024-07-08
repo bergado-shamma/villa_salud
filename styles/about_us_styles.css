@@ -1,29 +1,29 @@
 body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-    sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #e6ffe6;
+  color: #090909;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
-  background-color: transparent;
+header, footer {
+  background-color: #144511;
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  z-index: 2;
-  position: absolute;
   width: 100%;
 }
 
 .logo img {
-  margin-top: 20px;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 nav ul {
@@ -34,19 +34,18 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
   background-color: transparent;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   text-decoration: none;
   border-radius: 4px;
   border: 2px solid transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   font-weight: bold;
 }
 
@@ -55,54 +54,58 @@ nav ul li a:hover {
   color: white;
 }
 
-.about-section {
-  padding: 50px;
-  background-color: #f0f0f0;
-}
-
-.about-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.about-section p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.about-team {
+.main-content {
   display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
+  justify-content: space-between;
+  margin-top: 70px;
+  padding: 0 20px;
 }
 
-.team-member {
-  text-align: center;
-  width: 250px;
+.about-section, .contact-info {
+  flex: 1;
+  padding: 30px;
+  background-color: #e6ffe6;
+  text-align: left;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  border-radius: 10px;
 }
 
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.about-section h1, .contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
-.team-member h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.team-member p {
+.about-section p, .contact-info p {
   font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-section ul {
+  text-align: left;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.about-section li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
 }
 
 footer {
   background-color: #144511;
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   position: relative;
-  bottom: 0;
   width: 100%;
+  margin-bottom: 0px;
+}
+
+.footer-content {
+  width: 100%;
+  text-align: center;
 }
