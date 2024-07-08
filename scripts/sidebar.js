@@ -5,7 +5,6 @@ $(document).ready(function() {
         var target = $this.next('.dropdown-content');
         
         $('.dropdown-content').not(target).slideUp();
-
         target.slideToggle();
     });
 

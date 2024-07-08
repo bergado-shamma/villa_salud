@@ -25,7 +25,7 @@
       <section class="tagline">
         <div class="tagline-text">
           <h1>Filling every occasion with great food and service</h1>
-          <a href="#" class="btn">Learn more about us</a>
+          <a href="./works/about_us.php" class="btn">Learn more about us</a>
         </div>
       </section>
 

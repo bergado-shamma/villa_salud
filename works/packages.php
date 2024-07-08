@@ -11,7 +11,7 @@
     <header>
       <section class="text">
         <div class="desc-text">
-          <h1>Villa Salud Packages and Packages</h1>
+          <h1>Villa Salud Packages and Services</h1>
         </div>
       </section>
       <div class="logo">

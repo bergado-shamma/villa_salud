@@ -9,10 +9,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
 
-$stmt = $conn->prepare("INSERT INTO tbl_patron (name, email, address, telephone, mobile, signature) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $name, $email, $address, $telephone, $mobile, $signature);
+$stmt = $conn->prepare("INSERT INTO tbl_patron (patron_id, name, email, address, telephone, mobile, signature) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssss", $patron_id, $name, $email, $address, $telephone, $mobile, $signature);
+
+$patron_id = generateRandomId();
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -30,4 +31,17 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
+
+function generateRandomId($length = 8)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomId = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $randomId .= $characters[rand(0, $charactersLength - 1)];
+    }
+
+    return $randomId;
+}
 ?>
